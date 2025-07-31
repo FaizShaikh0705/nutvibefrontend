@@ -61,7 +61,7 @@ const index = () => {
                   <div className="col-lg-12 text-center">
                     <p className="text-center">
                       Remembered your password?{' '}
-                      <Link href="/login" style={{ color: "#d7b56d", textDecoration: "none" }}>
+                      <Link href="/login" style={{ color: "#9f6d00", textDecoration: "none" }}>
                         <strong>Login</strong>
                       </Link>
                     </p>

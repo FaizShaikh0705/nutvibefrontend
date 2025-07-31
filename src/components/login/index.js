@@ -90,7 +90,7 @@ const loginPage = () => {
                                                 <ErrorMessage name="password" component="div" style={{ color: 'red' }} />
                                             </div>
                                             {/* <div className='form-group text-end'>
-                                                <Link href="forgotPassword" style={{ color: "#d7b56d", textDecoration: "none" }}>Forgot Password?</Link>
+                                                <Link href="forgotPassword" style={{ color: "#9f6d00", textDecoration: "none" }}>Forgot Password?</Link>
                                             </div> */}
                                             <div className="form-group text-center">
                                                 <Button type="submit" disabled={isSubmitting} variant='outline-dark'>
@@ -105,7 +105,7 @@ const loginPage = () => {
                                 </div> */}
                                 {/* <div className="row pt-3">
                                     <div className="col-lg-12 text-center">
-                                        <p class="text-center"> Don't have an account?  <Link href="/register" style={{ color: "#d7b56d", textDecoration: "none" }}><strong>Register</strong></Link></p>
+                                        <p class="text-center"> Don't have an account?  <Link href="/register" style={{ color: "#9f6d00", textDecoration: "none" }}><strong>Register</strong></Link></p>
                                     </div>
                                 </div> */}
                             </div>

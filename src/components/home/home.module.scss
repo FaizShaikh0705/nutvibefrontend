@@ -1,73 +1,122 @@
 .home-slidebanner {
-  margin-top: 32px;
-  @media (max-width: 767px) {
-    margin-top: 23px;
-  }
-  .learn-h-sec1 {
-    // // background: url(../../../public/images/bannerdesktopnewmain.jpg) no-repeat
-    //   bottom / cover;
-    padding: 0 0 36% 0;
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+
+  .slide {
+    height: 65vh;
+    background-size: cover;
+    background-position: center;
     position: relative;
-    //margin-top: 50px;
-    @media (max-width: 767px) {
-      // // background: url(../../../public/images/bannermobilemain.jpg) no-repeat
-      //   center / cover;
-      padding: 0 0 136% 0;
-      text-align: left;
-    }
-    .btn {
-      position: absolute;
-      left: 33%;
-      top: 73%;
-      width: 13%;
-      height: 11%;
-      font-size: 0;
-      // // background-color: #08089b;
-      @media (max-width: 767px) {
-        left: 39%;
-        top: 31%;
-        width: 22%;
-        height: 5%;
-      }
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 20px;
+  }
+
+  .slide1 {
+    background-image: url('/images/bnnr1.jpg'); // Replace with your actual image path
+  }
+
+  .slide2 {
+    background-image: url('/images/bnnr2.jpg'); // Replace with your actual image path
+  }
+
+  .slide3 {
+    background-image: url('/images/bnnr3.jpg'); // Replace with your actual image path
+  }
+
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 1;
+  }
+
+  .contentWrapper {
+    position: relative; // ensures content sits above overlay
+    top: 30%;
+    left: 17%;
+    z-index: 2;
+    max-width: 1200px;
+    color: #fff;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
+  }
+
+  .title {
+    font-family: Poppins, sans-serif;
+    font-size: 3.5rem;
+    font-weight: bolder;
+    margin-bottom: 0.3rem;
+  }
+
+  .subtitle {
+    font-family: Poppins, sans-serif;
+    font-size: 1.25rem;
+    margin-bottom: 3.5rem;
+    text-transform: uppercase;
+    font-weight: 800;
+  }
+
+  .description {
+    font-family: Poppins, sans-serif;
+    font-size: 1.8rem;
+    // max-width: 700px;
+    margin: 0 auto 2rem;
+    line-height: 1.3;
+    font-weight: 800;
+  }
+
+  .buyButton {
+    background-color: #c39736;
+    color: #fff;
+    padding: 12px 28px;
+    border-radius: 6px;
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+
+    &:hover {
+      background-color: #ddb150;
+      color: #fff;
     }
   }
-  .learn-h-sec2 {
-    // background: url(../../../public/images/10-off.jpg) no-repeat bottom /
-      // cover;
-    padding: 0 0 36% 0;
-    position: relative;
-    //margin-top: 50px;
-    @media (max-width: 767px) {
-      // background: url(../../../public/images/offerbannermobile1.jpg) no-repeat
-        // center / cover;
-      padding: 0 0 136% 0;
-      text-align: left;
+
+  @media (max-width: 768px) {
+    .title {
+      font-size: 2rem;
     }
-    .btn {
-      position: absolute;
-      left: 43%;
-      top: 73%;
-      width: 13%;
-      height: 11%;
-      font-size: 0;
-      // background-color: #08089b;
-      @media (max-width: 767px) {
-        left: 37%;
-        top: 52%;
-        width: 22%;
-        height: 5%;
-      }
+
+    .subtitle {
+      font-size: 1rem;
+    }
+
+    .description {
+      font-size: 0.95rem;
+    }
+
+    .buyButton {
+      padding: 10px 20px;
+      font-size: 0.9rem;
     }
   }
 }
 
+
 .intro-main {
+
   // margin: 40px 0px;
   .newsbtn {
     @media (max-width: 767px) {
       margin-bottom: 20px;
     }
   }
+
   h2 {
     font-size: 40px;
     margin-bottom: 30px;
@@ -80,6 +129,7 @@
 
   .intro-image {
     border-radius: 5px;
+
     @media (max-width: 767px) {
       width: 100%;
       height: auto;
@@ -88,16 +138,19 @@
 }
 
 .ingredient-main {
+
   // margin: 80px 0px;
   // p{
   //   text-align: justify;
   // }
   .ingredient-side-content {
     margin: 70px 0px;
+
     @media (max-width: 767px) {
       margin: 10px 0px;
     }
   }
+
   .ingredient-image {
     @media (max-width: 767px) {
       width: 100%;
@@ -105,20 +158,25 @@
     }
   }
 }
+
 .benfits {
-  color: #d7b56d;
-  p{
-    color: #d7b56d;
+  color: #9f6d00;
+
+  p {
+    color: #9f6d00;
     font-weight: 600;
   }
+
   li {
     font-weight: 600;
     font-size: 20px;
     margin-bottom: 20px;
     font-family: Poppins;
   }
+
   .intro-image {
     border-radius: 5px;
+
     // margin-bottom: 30px;
     @media (max-width: 767px) {
       width: 100%;
@@ -126,48 +184,56 @@
       margin-bottom: 15px;
     }
   }
+
   // // background-image: url(../../../public/images/all-banner.jpg);
   // background-repeat: no-repeat;
   // background-size: cover;
   @media (max-width: 767px) {
     // // background-image: url(../../../public/images/backgroundimage1.jpg);
   }
+
   .ben-list {
     // background-color: #000;
-    border: 1px solid #d7b56d;
-    box-shadow: -2px 2px 2px 0px #d7b56d;
+    border: 1px solid #9f6d00;
+    box-shadow: -2px 2px 2px 0px #9f6d00;
     margin-bottom: 11px;
     font-weight: 900;
   }
 }
 
 .testimony-main {
+
   // margin: 80px 0px;
   .testimonial-body {
     // background-color: #fff;
     border-radius: 5px;
-    box-shadow: -3px 3px 3px 3px #d7b56d;
+    box-shadow: -3px 3px 3px 3px #9f6d00;
+
     // p{
     //   text-align: justify;
     // }
     .user-div {
       // display: flex;
       justify-content: center;
+
       @media (max-width: 767px) {
         // padding-right: 9px;
       }
+
       .avatar {
         width: 80px;
         height: 80px;
         border-radius: 50%;
       }
+
       .star-size {
         font-size: 18px;
-        color: #d7b56d;
+        color: #9f6d00;
         // width: 20%;
         padding: 3px 0px;
         // width: 54%;
       }
+
       .user-name {
         font-style: italic;
         font-size: 13px;
@@ -175,10 +241,12 @@
         padding-top: 10px;
       }
     }
+
     .view-btn {
       cursor: pointer;
       font-weight: 700;
     }
+
     .testi-image {
       width: 100% !important;
       height: 600px !important;
@@ -235,6 +303,7 @@
     border-radius: 10px;
   }
 }
+
 // .offer {
 //   // background: url(../../../public/images/offerbanner.jpg) no-repeat bottom /
 //     cover;
@@ -252,6 +321,7 @@
     width: 246px !important;
     height: 420px !important;
     border-radius: 10px;
+
     @media (max-width: 767px) {
       width: 95% !important;
       height: 300px !important;

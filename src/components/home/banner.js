@@ -8,113 +8,72 @@ import dynamic from "next/dynamic";
 import Carousel from 'react-bootstrap/Carousel';
 import styles from "./home.module.scss";
 
-// var $ = require("jquery");
-// if (typeof window !== "undefined") {
-//   window.$ = window.jQuery = require("jquery");
-// }
 
 const HomeBanner = () => {
-  // const OwlCarousel = dynamic(() => import("react-owl-carousel"), {
-  //   ssr: false,
-  // });
-
-  // const state = {
-  //   responsive: {
-  //     0: {
-  //       items: 1,
-  //     },
-  //     450: {
-  //       items: 1,
-  //     },
-  //     600: {
-  //       items: 1,
-  //     },
-  //     1000: {
-  //       items: 1,
-  //     },
-  //   },
-  // };
 
   return (
     <>
       <section className={styles["home-slidebanner"]}>
-{/*        
-              <OwlCarousel
-                className="owl-theme"
-                responsive={state.responsive}
-                loop
-                nav
-                autoplay={false}
-                autoplayTimeout={5000}
-                dots={false}
-              > */}
-               <Carousel fade indicators={false}>
-               <Carousel.Item interval={3000}>
-                  <div className={styles["learn-h-sec1"]}>
-                    <Link href="#shop" className={styles["btn"]}>
-                      Shop Now
-                    </Link>
-                  </div>
-              </Carousel.Item>
-              <Carousel.Item interval={3000}>
-                  <div className={styles["learn-h-sec2"]}>
-                    <Link href="#shop" className={styles["btn"]}>
-                      Shop Now
-                    </Link>
-                  </div>
-              </Carousel.Item>
-
-
-
-
-          {/* <Carousel.Item interval={4000}>
-                <div>
-                  <Image
-                    src="/images/bannerdesktopnew.png"
-                    alt="Banner Image"
-                    width="10"
-                    height="10"
-                    className={styles['ban-img']}
-                    objectFit="cover"
-                    layout="responsive"
-                  />
-                   <Image
-                    src="/images/bannermobilenew.png"
-                    alt="Banner Mobile Image"
-                    width="10"
-                    height="10"
-                    className={styles['ban-mob-img']}
-                    objectFit="cover"
-                    layout="responsive"
-                  />
+        <Carousel fade controls={true} indicators={false}>
+          <Carousel.Item interval={3000}>
+            <div className={`${styles.slide} ${styles.slide1}`}>
+              <div className={styles.overlay}>
+                <div className={styles.contentWrapper}>
+                  <h1 className={styles.title}>OUR FINEST SELECTION</h1>
+                  <h5 className={styles.subtitle}>EVERY BITE, A BURST OF WELLNESS.</h5>
+                  <p className={styles.description}>
+                    FROM CRUNCHY ALMONDS TO RICH CASHEWS AND JUICY RAISINS, DISCOVER A
+                    CAREFULLY CURATED RANGE OF DRY FRUITS THAT BRING NATURE’S NUTRITION
+                    STRAIGHT TO YOU.
+                  </p>
+                  <br />
+                  <Link href="/products" className={`${styles.buyButton}`}>
+                    BUY NOW
+                  </Link>
                 </div>
-                </Carousel.Item>
-                <Carousel.Item interval={4000}>
-                <div>
-                  <Image
-                    src="/images/offerbannernew.png"
-                    alt="Offer Image"
-                    width="10"
-                    height="10"
-                    className={styles['ban-img']}
-                    objectFit="cover"
-                    layout="responsive"
-                  />
-                   <Image
-                    src="/images/offermobilebannernew.png"
-                    alt="Offer Mobile Image"
-                    width="10"
-                    height="10"
-                    className={styles['ban-mob-img']}
-                    objectFit="cover"
-                    layout="responsive"
-                  />
+              </div>
+            </div>
+          </Carousel.Item>
+          <Carousel.Item interval={3000}>
+            <div className={`${styles.slide} ${styles.slide2}`}>
+              <div className={styles.overlay}>
+                <div className={styles.contentWrapper}>
+                  <h1 className={styles.title}>OUR FINEST SELECTION</h1>
+                  <h5 className={styles.subtitle}>EVERY BITE, A BURST OF WELLNESS.</h5>
+                  <p className={styles.description}>
+                    FROM CRUNCHY ALMONDS TO RICH CASHEWS AND JUICY RAISINS, DISCOVER A
+                    CAREFULLY CURATED RANGE OF DRY FRUITS THAT BRING NATURE’S NUTRITION
+                    STRAIGHT TO YOU.
+                  </p>
+                  <br />
+                  <Link href="/products" className={`${styles.buyButton}`}>
+                    BUY NOW
+                  </Link>
                 </div>
-                </Carousel.Item> */}
-                </Carousel>
-              {/* </OwlCarousel> */}
-              
-      </section>
+              </div>
+            </div>
+          </Carousel.Item>
+          <Carousel.Item interval={3000}>
+            <div className={`${styles.slide} ${styles.slide3}`}>
+              <div className={styles.overlay}>
+                <div className={styles.contentWrapper}>
+                  <h1 className={styles.title}>OUR FINEST SELECTION</h1>
+                  <h5 className={styles.subtitle}>EVERY BITE, A BURST OF WELLNESS.</h5>
+                  <p className={styles.description}>
+                    FROM CRUNCHY ALMONDS TO RICH CASHEWS AND JUICY RAISINS, DISCOVER A
+                    CAREFULLY CURATED RANGE OF DRY FRUITS THAT BRING NATURE’S NUTRITION
+                    STRAIGHT TO YOU.
+                  </p>
+                  <br />
+                  <Link href="/products" className={`${styles.buyButton}`}>
+                    BUY NOW
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </Carousel.Item>
+        </Carousel>
+      </section >
     </>
   );
 };

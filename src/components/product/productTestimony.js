@@ -88,7 +88,7 @@ const productTestimony = (category) => {
                             </div>
                             <div className='ms-3'>
                               <p>{value.UserName} <span className={styles['verify-badge']}>Verified</span></p>
-                              <span style={{ color: "#d7b56d" }} className='float-start'>
+                              <span style={{ color: "#9f6d00" }} className='float-start'>
                                 {/* <FaStar className="me-2" /><FaStar className="me-2" /><FaStar className="me-2" /><FaStar className="me-2" /> */}
                                 {[1, 2, 3, 4, 5].map((star) => (
                                   <span

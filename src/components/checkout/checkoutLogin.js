@@ -68,7 +68,7 @@ const checkoutLogin = () => {
                         </div> */}
                             <div className="row pt-3">
                                 <div className="col-lg-12 text-center">
-                                    <p class="text-center"> Don't have an account?  <Link href="/register" style={{color:"#d7b56d" ,textDecoration:"none"}}><strong>Sign up</strong></Link></p>
+                                    <p class="text-center"> Don't have an account?  <Link href="/register" style={{color:"#9f6d00" ,textDecoration:"none"}}><strong>Sign up</strong></Link></p>
                                 </div>
                             </div>
                         </div>

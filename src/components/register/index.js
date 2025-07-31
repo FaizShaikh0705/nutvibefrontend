@@ -103,7 +103,7 @@ const RegisterPage = () => {
                                 </div> */}
                                 <div className="row pt-3">
                                     <div className="col-lg-12 text-center">
-                                        <p class="text-center"> Already have an account?  <Link href="/login" style={{ color: "#d7b56d", textDecoration: "none" }}><strong>Login</strong></Link></p>
+                                        <p class="text-center"> Already have an account?  <Link href="/login" style={{ color: "#9f6d00", textDecoration: "none" }}><strong>Login</strong></Link></p>
                                     </div>
                                 </div>
                             </div>

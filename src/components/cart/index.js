@@ -57,7 +57,7 @@ const index = () => {
   //         [_id]: (prevQuantity[_id] || 1) - 1,
   //     }));
   // };
-  const cpnCodStyl = { backgroundColor: '#000', padding: "2% 5%", borderRadius: "15px", color: "#d7b56d" };
+  const cpnCodStyl = { backgroundColor: '#000', padding: "2% 5%", borderRadius: "15px", color: "#9f6d00" };
   const history = useRouter();
 
   useEffect(() => {
@@ -348,7 +348,7 @@ const index = () => {
                               </div>
                               <a
                                 href="#!"
-                                style={{ color: "#d7b56d" }}
+                                style={{ color: "#9f6d00" }}
                                 onClick={() => handleDelete(product)}
                               >
                                 <i className="fas fa-trash-alt"></i>

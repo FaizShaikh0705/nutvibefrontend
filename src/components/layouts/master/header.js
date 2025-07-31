@@ -132,8 +132,8 @@ const Header = ({ productData: initialProductData, sluginput }) => {
             <Link className="navbar-brand" href="/">
               <Image
                 key=""
-                height="180"
-                width="180"
+                height="90"
+                width="90"
                 objectFit="contain"
                 src="/images/logo.png"
                 alt="logo_img"
