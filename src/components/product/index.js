@@ -14,7 +14,73 @@ import Form from "react-bootstrap/Form";
 import { addProduct } from "../../redux/cartRedux";
 import { useDispatch, useSelector } from "react-redux";
 import { publicRequest } from "../../requestMethods";
+import { motion } from "framer-motion";
 // import * as fbq from '../../../lib/fpixel';
+
+
+const products = [
+  {
+    name: "California Almonds",
+    category: "Nuts",
+    weight: "250 grams",
+    price: 525,
+    image: "/images/almonds.jpg",
+  },
+  {
+    name: "Cashew Nuts",
+    category: "Nuts",
+    weight: "250 grams",
+    price: 300,
+    image: "/images/cashews.jpg",
+  },
+  {
+    name: "Walnut Kernels",
+    category: "Nuts",
+    weight: "250 grams",
+    price: 250,
+    image: "/images/walnuts.jpg",
+  },
+  {
+    name: "Premium Dates",
+    category: "Dry Fruit",
+    weight: "500 grams",
+    price: 400,
+    image: "/images/dates.jpg",
+  },
+  {
+    name: "Pistachios",
+    category: "Nuts",
+    weight: "250 grams",
+    price: 450,
+    image: "/images/pistachios.jpg",
+  },
+  {
+    name: "Raisins",
+    category: "Dry Fruit",
+    weight: "250 grams",
+    price: 180,
+    image: "/images/raisins.jpg",
+  },
+  {
+    name: "kishmis",
+    category: "Dry Fruit",
+    weight: "250 grams",
+    price: 180,
+    image: "/images/kishmis.jpg",
+  },
+  {
+    name: "dryfigs",
+    category: "Dry Fruit",
+    weight: "250 grams",
+    price: 180,
+    image: "/images/dryfigs.jpg",
+  },
+];
+
+const cardVariants = {
+  hidden: { opacity: 0, y: 30 },
+  visible: { opacity: 1, y: 0 },
+};
 
 
 const Product = ({ productData: initialProductData }) => {
@@ -24,42 +90,42 @@ const Product = ({ productData: initialProductData }) => {
   const [comboproduct, setComboProduct] = useState({});
   const [modalLink, setmodalLink] = useState("#");
 
-  const [quantity, setQuantity] = useState(0);
-  const dispatch = useDispatch();
+  // const [quantity, setQuantity] = useState(0);
+  // const dispatch = useDispatch();
 
-  const handleVariantSelect = (productId, variant) => {
-    setSelectedVariants((prevVariants) => ({
-      ...prevVariants,
-      [productId]: variant,
-    }));
-  };
+  // const handleVariantSelect = (productId, variant) => {
+  //   setSelectedVariants((prevVariants) => ({
+  //     ...prevVariants,
+  //     [productId]: variant,
+  //   }));
+  // };
 
-  useEffect(() => {
-    const getProduct = async () => {
-      try {
-        const res = await publicRequest.get("/products");
-        setProduct(res.data);
-      } catch (error) {
-        console.error("Error fetching products:", error);
-        // Handle error as needed, e.g., set an error state
-      }
-    };
+  // useEffect(() => {
+  //   const getProduct = async () => {
+  //     try {
+  //       const res = await publicRequest.get("/products");
+  //       setProduct(res.data);
+  //     } catch (error) {
+  //       console.error("Error fetching products:", error);
+  //       // Handle error as needed, e.g., set an error state
+  //     }
+  //   };
 
 
-    const getCombo = async () => {
-      try {
-        const res = await publicRequest.get("/combo");
-        setComboProduct(res.data);
-        console.log("combo data", res.data);
-      } catch (error) {
-        console.error("Error fetching comboproducts:", error);
-        // Handle error as needed, e.g., set an error state
-      }
-    };
+  //   const getCombo = async () => {
+  //     try {
+  //       const res = await publicRequest.get("/combo");
+  //       setComboProduct(res.data);
+  //       console.log("combo data", res.data);
+  //     } catch (error) {
+  //       console.error("Error fetching comboproducts:", error);
+  //       // Handle error as needed, e.g., set an error state
+  //     }
+  //   };
 
-    getProduct();
-    getCombo();
-  }, []);
+  //   getProduct();
+  //   getCombo();
+  // }, []);
 
   // useEffect(() => {
   //   if (initialProductData) {
@@ -89,207 +155,72 @@ const Product = ({ productData: initialProductData }) => {
   //   };
   // }, []);
 
-  const addProductInCart = (item, key) => {
-    setQuantity(1);
-    item["selectedVariantName"] = selectedVariants[key] ? selectedVariants[key]["variantName"] : item.postVariantName1;
-    item["selectedVariantPrice"] = selectedVariants[key] ? selectedVariants[key]["price"] : item.postPriceName;
-    item["quantity"] = 1;
-    // console.log(item,key);
-    // console.log(selectedVariants[key]);
-    dispatch(
-      addProduct(item)
-    );
-    setmodalLink('/product/' + item.sluginput.toLowerCase().split(" ").join("-"));
-    setShow(true);
-    fbq.addToCart(item._id, item.postPriceName, item.category, item.postTopicName);
+  // const addProductInCart = (item, key) => {
+  //   setQuantity(1);
+  //   item["selectedVariantName"] = selectedVariants[key] ? selectedVariants[key]["variantName"] : item.postVariantName1;
+  //   item["selectedVariantPrice"] = selectedVariants[key] ? selectedVariants[key]["price"] : item.postPriceName;
+  //   item["quantity"] = 1;
+  //   // console.log(item,key);
+  //   // console.log(selectedVariants[key]);
+  //   dispatch(
+  //     addProduct(item)
+  //   );
+  //   setmodalLink('/product/' + item.sluginput.toLowerCase().split(" ").join("-"));
+  //   setShow(true);
+  //   fbq.addToCart(item._id, item.postPriceName, item.category, item.postTopicName);
 
-  };
+  // };
 
-  const [show, setShow] = useState(false);
+  // const [show, setShow] = useState(false);
 
-  const handleClose = () => setShow(false);
-  // const handleShow = () => setShow(true);
+  // const handleClose = () => setShow(false);
+  // // const handleShow = () => setShow(true);
 
   return (
-    <section className={`${styles["products-main"]} py-4`} id="shop">
+    <section style={{ background: "#fdfdfd", padding: "50px 0" }}>
       <Container>
-        <Row className=" text-center">
-          <h3 style={{ color: "#D7B56D" }} className="">Our Popular Products</h3>
-          <h2 style={{ color: "#D7B56D" }} className="mb-4">Best Sellers</h2>
-          {product &&
-            Object.entries(product)
-              // .filter(([key, item]) => item.postIsActiveStatus === "1" && item.category === "Hair Oil")
-              .filter(([key, item]) => item.postIsActiveStatus === "1").sort((a, b) => a[1].postPositionNo - b[1].postPositionNo)
-              .map(([key, item], index) => {
-                const firstImage =
-                  item.postImage.length > 0 ? item.postImage[3] : "";
-                return (
-                  <Col lg={3} key={key} className=" col-6 pb-4">
-                    {/* <Link href={/product/${(item[1].postTopicName).toLowerCase().split(" ").join("-")}}> */}
-                    <Card className={`${styles["product-card"]} h-100`}>
-                      <Link
-                        key={key}
-                        href={`/product/${item.sluginput
-                          .toLowerCase()
-                          .split(" ")
-                          .join("-")}`}
-                      >
-
-                        <Card.Img
-                          variant="top"
-                          alt="firstImage"
-                          src={firstImage}
-                          className="mt-1"
-                        />
-                      </Link>
-                      <Card.Body className="justify-content-center">
-                        <Card.Title className={styles['card-heading']}>
-                          {selectedVariants[key]?.variantName ? (
-                            <>
-                              {item.postTopicName}{" "}
-                              {selectedVariants[key].variantName}
-                            </>
-                          ) : (
-                            <>
-                              {item.postTopicName} {item.postVariantName2 === "" ? "" : `(${item.postVariantName1})`}
-                            </>
-                          )}
-                        </Card.Title>
-                        <Card.Text className={styles['price-txt']}>
-                          {selectedVariants[key]?.price ? (
-                            <>Rs. {selectedVariants[key].price}.00</>
-                          ) : (
-                            <>
-                              {item.strikeOutName == 0 ?
-                                (<> Rs. {item.postPriceName}.00</>) : (<><span className={styles['strike-price']}>Rs. {item.strikeOutName}.00</span> Rs. {item.postPriceName}.00</>)}
-                            </>)}
-                          <span className={`${styles['off-box']} rounded-3`}>
-                            {item.discoutpercentage}% Off
-                          </span>
-                        </Card.Text>
-                        {/* <Card.Title>{item[1].postTopicName}</Card.Title>
-                                            <Card.Text>Rs. {item[1].postPriceName}.00</Card.Text> */}
-                        <InputGroup className=" justify-content-center">
-                          {/* {item.postVariantName2 == "" ? "" :
-                            <DropdownButton
-                              variant="outline-dark"
-                              title={
-                                selectedVariants[key]
-                                  ? selectedVariants[key].variantName
-                                  : "50 ml"
-                              }
-                              id="input-group-dropdown-1"
-                            >
-                              <Dropdown.Item
-                                onClick={() =>
-                                  handleVariantSelect(key, {
-                                    title: item.postTopicName,
-                                    price: item.postPriceName,
-                                    variantName: item.postVariantName1,
-                                  })
-                                }
-                              >
-                                {item.postVariantName1}
-                              </Dropdown.Item>
-                              <Dropdown.Item
-                                onClick={() =>
-                                  handleVariantSelect(key, {
-                                    title: item.postTopicName2,
-                                    price: item.postPriceName2,
-                                    variantName: item.postVariantName2,
-                                  })
-                                }
-                              >
-                                {item.postVariantName2}
-                              </Dropdown.Item>
-                            </DropdownButton>
-                          } */}
-                          <Button
-                            onClick={() => addProductInCart(item, key)}
-                            className={styles["add-cart"]}
-                            variant="outline-dark"
-                            id="button-addon2"
-                          >
-                            ADD TO CART
-                          </Button>
-                        </InputGroup>
-                      </Card.Body>
-                    </Card>
-                  </Col>
-                );
-              })}
-          {/* Combo Products */}
-          {comboproduct &&
-            Object.entries(comboproduct)
-              .filter(([key, item]) => item.postIsActiveStatus === "1").sort((a, b) => a[1].postPositionNo - b[1].postPositionNo)
-              .sort((a, b) => a[1].postPositionNo - b[1].postPositionNo)
-              .map(([key, item], index) => {
-                const firstImage = item.images.length > 0 ? item.images[3] : "";
-                return (
-                  <Col lg={3} key={`combo-${key}`} className="col-6 pb-4">
-                    <Card className={`${styles["product-card"]} h-100`}>
-                      <Link
-                        href={`/combo/${item.sluginput.toLowerCase().split(" ").join("-")}`}
-                      >
-                        <Card.Img
-                          variant="top"
-                          alt="firstImage"
-                          src={firstImage}
-                          className="mt-1"
-                        />
-                      </Link>
-                      <Card.Body className="justify-content-center">
-                        <Card.Title className={styles['card-heading']}>
-                          {item.comboName}
-                        </Card.Title>
-                        <Card.Text className={styles['price-txt']}>
-                          {/* {item.strikeOutName == 0 ? 
-                            (<>Rs. {item.comboPrice}.00</>) : 
-                            (<>
-                              <span className={styles['strike-price']}>Rs. {item.strikeOutName}.00</span> 
-                              Rs. {item.postPriceName}.00
-                            </>)
-                          } */}
-                          <span className={styles['']}>Rs. {item.comboPrice}.00</span>
-                          {/* <span className={`${styles['off-box']} rounded-3`}>
-                            {item.discoutpercentage}% Off
-                          </span> */}
-                        </Card.Text>
-                        <InputGroup className="justify-content-center">
-                          <Button
-                            onClick={() => addProductInCart(item, key)}
-                            className={styles["add-cart"]}
-                            variant="outline-dark"
-                            id="button-addon2"
-                          >
-                            ADD TO CART
-                          </Button>
-                        </InputGroup>
-                      </Card.Body>
-                    </Card>
-                  </Col>
-                );
-              })}
-
-          <Modal
-            centered
-            show={show}
-            onHide={handleClose}
-            // size="sm"
-            className={styles["cart-modal"]}
-          >
-            <Modal.Header closeButton></Modal.Header>
-            <Modal.Body style={{ fontFamily: 'Montserrat' }}><strong>Item Added To Cart</strong></Modal.Body>
-            <Modal.Footer className="justify-content-between">
-              {/* <Link className="btn btn-outline-dark" href={modalLink}>Continue Shopping</Link> */}
-              <Button variant="outline-dark" onClick={handleClose}>
-                Continue Shopping
-              </Button>
-              <Button variant="outline-secondary" href="/cart">
-                Go To Cart
-              </Button>
-            </Modal.Footer>
-          </Modal>
+        <h2 className="text-center mb-5 fw-bold">Our Premium Products</h2>
+        <Row>
+          {products.map((product, index) => (
+            <Col xs={12} sm={6} md={4} lg={3} className="mb-4 d-flex align-items-stretch">
+              <motion.div
+                variants={cardVariants}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                className="w-100"
+              >
+                <Card className={styles.card}>
+                  <motion.div
+                    whileHover={{ scale: 1.1 }}
+                    transition={{ duration: 0.4, ease: "easeInOut" }}
+                    className={styles.imageWrapper}
+                  >
+                    <Image
+                      src={product.image}
+                      alt={product.name}
+                      width={300}
+                      height={200}
+                      className="rounded"
+                      layout="responsive"
+                    />
+                  </motion.div>
+                  <Card.Body>
+                    <div className="d-flex justify-content-between">
+                      <Card.Title className={styles.productName}>{product.name}</Card.Title>
+                      <span className={styles.weight}>{product.weight}</span>
+                    </div>
+                    <Card.Text className={styles.category}>{product.category}</Card.Text>
+                    <div className="d-flex justify-content-between align-items-center">
+                      <span className={styles.price}>Rs. {product.price.toFixed(2)}</span>
+                      <Button className={styles.cartButton}>Add to Cart</Button>
+                    </div>
+                  </Card.Body>
+                </Card>
+              </motion.div>
+            </Col>
+          ))}
         </Row>
       </Container>
     </section>
