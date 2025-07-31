@@ -44,7 +44,7 @@ const RegisterPage = () => {
                             height="180"
                             width="180"
                             objectFit="contain"
-                            src="/images/logo.jpg"
+                            src="/images/logo.png"
                             alt="logo_img"
                         />
                     </div> */}
