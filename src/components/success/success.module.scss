@@ -1,0 +1,19 @@
+.success{
+    margin-top: 32px;
+    
+    .content{
+        margin: 150px 0px;
+        h3{
+            @media(max-width:767px){
+                font-size: 17px;
+            }
+        }
+       .email{
+        padding-top: 25px;
+        padding-left: 10px;
+        @media(max-width: 767px){
+            padding-top: 10px;
+        }
+       }
+    }
+}

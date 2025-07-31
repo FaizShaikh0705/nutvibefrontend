@@ -1,0 +1,102 @@
+#footer {
+  position: relative;
+  font-weight: 400;
+  color: #9F6D00;
+  font-size: 16px;
+  // // background-image: url(../../../../public/images/aboutusmain.jpg);
+}
+
+@media (max-width: 767px) {
+  // #footer {
+  // // background-image: url(../../../../public/images/mobilefooter1.jpg);
+  // }
+}
+
+#footer #footer-content {
+  font-size: 1rem !important;
+  line-height: 1.5 !important;
+}
+
+#footer p {
+  // font-weight: 600;
+  color: #9F6D00;
+}
+
+#footer a {
+  color: #9F6D00;
+  text-decoration: none;
+  font-family: Poppins;
+  transition: 0.3s;
+  // font-weight: 600;
+}
+
+#footer li {
+  margin-bottom: 12px;
+}
+
+#footer ul {
+  padding-left: 17px !important;
+}
+
+#footer .widget-logo {
+  width: 30% !important;
+  height: auto;
+  padding-bottom: 10px;
+}
+
+#footer .contact-logo,
+#footer .contact-logo1,
+#footer .contact-logo2 {
+  width: 22px !important;
+  height: auto;
+  padding-bottom: 5px;
+  margin-right: 5px !important;
+}
+
+/* Contact list */
+#footer .footer-contact h3 {
+  margin-left: 26px !important;
+}
+
+#footer .footer-contact ul {
+  list-style: none !important;
+  line-height: 3;
+}
+
+#footer .footer-links {
+  padding-right: 18px;
+}
+
+#footer .newsbtn {
+  background-color: #000;
+  color: #9F6D00;
+  border: 2px solid #9F6D00;
+}
+
+#footer .input-group {
+  border: 2px solid #9F6D00;
+}
+
+#footer ::placeholder {
+  color: #9F6D00;
+}
+
+#footer hr {
+  margin: 0px !important;
+  opacity: 0.85 !important;
+}
+
+#footer #footer-Copy p {
+  margin-top: 7px !important;
+  margin-bottom: 7px !important;
+}
+
+.footer-social p {
+  margin-bottom: 10px;
+}
+
+.social-icons a {
+  color: #a06a00;
+  font-size: 20px;
+  margin-right: 10px;
+}

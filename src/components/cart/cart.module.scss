@@ -1,0 +1,121 @@
+.breadcrumb {
+    margin-top: 32px;
+    @media(max-width: 767px){
+        margin-top: 23px;
+    }
+    // background-image: url(../../../public/images/productbanner.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    .content {
+        padding: 80px 0px;
+        color: #d7b56d;
+        a {
+            text-decoration: none;
+            color: #d7b56d;
+        }
+        p{
+            color: #d7b56d;
+        }
+    }
+}
+
+.cart-section {
+    margin: 35px;
+
+    a {
+        text-decoration: none;
+    }
+    .mob-card{
+        @media(max-width:767px){
+            width: 100% !important;
+        }
+.box-head-mob{
+    @media(max-width: 767px){
+        display: block !important;
+    }
+    .box-p-mob{
+        @media(max-width: 767px){
+            margin-top: 15px;
+        }
+    }
+}
+    .payment-section {
+        background-color: rgb(116, 172, 116);
+        color: black;
+    }
+    .content-box-mob{
+        .h5-size{
+            @media(max-width: 767px){
+                font-size: 15px;
+            }
+        }
+        @media(max-width:767px){
+            display: block !important;
+        }
+    .productcart-image {
+        width: 85px !important;
+        height: auto;
+    }
+    .product-quantity{
+   display: flex;
+   border: 1px solid #000;
+   border-radius: 5px;
+   padding: 7px;
+   margin-right: 20px;
+   .plus-minus{
+    font-size: 8px;
+    @media(max-width: 767px){
+        font-size: 5px;
+    }
+   }
+   .before-img{
+    width: 10px !important;
+   
+   }
+   .after-img{
+    width: 10px !important;
+    height: 15px !important;
+    margin-top: 5px;
+   }
+    }
+}
+    }
+    .coupon-chckout{
+        display: flex;
+        justify-content: space-between;
+        .coupon-code{
+            border-radius: 5px !important;
+        }
+        @media (max-width:767px){
+            display: block;
+            .coupon-code{
+                width: 177px;
+            }
+        }
+        .city-select{
+            width: 240px;
+            @media(max-width: 767px){
+                width: 264px;
+            }
+        }
+    .chckout-div{
+        .total-price-div{
+       width: 350px;
+       @media(max-width: 767px){
+        width: 100%;
+       }
+        }
+        p{
+            font-weight: 600;
+        }
+        .chckout-btn{
+            width: 350px;
+            @media(max-width: 767px){
+                width: 100%;
+            }
+        }
+    }
+}
+}
+
