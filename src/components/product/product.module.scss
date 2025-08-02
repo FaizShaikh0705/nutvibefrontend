@@ -24,6 +24,19 @@
     }
 }
 
+.title {
+    font-size: 70px;
+    background: linear-gradient(#9F6D00, #392700);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-weight: bold;
+}
+
+.productsec {
+    background: linear-gradient(#f9f1e0, #FFFFFF);
+}
+
 .products-main {
     // margin: 0px 0px;
     // padding: 40px 0px;

@@ -7,7 +7,7 @@ import "owl.carousel/dist/assets/owl.theme.default.css";
 import dynamic from "next/dynamic";
 import Carousel from 'react-bootstrap/Carousel';
 import styles from "./home.module.scss";
-
+import { motion } from "framer-motion";
 
 const HomeBanner = () => {
 
@@ -18,7 +18,12 @@ const HomeBanner = () => {
           <Carousel.Item interval={3000}>
             <div className={`${styles.slide} ${styles.slide1}`}>
               <div className={styles.overlay}>
-                <div className={styles.contentWrapper}>
+                <motion.div
+                  className={styles.contentWrapper}
+                  initial={{ opacity: 0, y: 30 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, ease: "easeOut" }}
+                >
                   <h1 className={styles.title}>OUR FINEST SELECTION</h1>
                   <h5 className={styles.subtitle}>EVERY BITE, A BURST OF WELLNESS.</h5>
                   <p className={styles.description}>
@@ -30,7 +35,7 @@ const HomeBanner = () => {
                   <Link href="/products" className={`${styles.buyButton}`}>
                     BUY NOW
                   </Link>
-                </div>
+                </motion.div>
               </div>
             </div>
           </Carousel.Item>

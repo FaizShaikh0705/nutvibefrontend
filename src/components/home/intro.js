@@ -4,58 +4,43 @@ import styles from "./home.module.scss";
 import Link from "next/link";
 import Image from "next/image";
 import Button from "react-bootstrap/Button";
+import { motion } from 'framer-motion';
 
 const intro = () => {
   return (
-    <section className={`${styles["intro-main"]} my-4`} id="about">
-      <Container>
-        <Row>
-          <Col lg={6}>
-            <h2>Use It To Believe It</h2>
-              <h3>Introducing NutsvibeDry Fruits</h3>
-              <br/>
-            <p>
-              QiRah Hair Care is a brand by Heena Style Affairs,
-              a pioneering company dedicated to crafting natural hair products
-              that empower customers in their journey to combat various hair problems.
-              Our formulations are meticulously designed to harness the power of nature,
-              providing effective solutions for healthier, more vibrant hair. At QiRah,
-              we believe in the beauty of natural ingredients and the transformative impact
-              they can have on your hair. Join us in embracing a holistic approach to hair
-              care and rediscover the confidence that comes with nourished, revitalized locks.
-              <br />
-              <br />
-              Heena Style Affairs our company started its journey in 2014
-              with its clothing line and then established it's other brands
-              Zabacc and Nutsvibe. We believe in delivering quality products to our
-              customers and help them solve their problems, be it self hygiene or
-              hair loss, we fix it all. We acknowledge ourselves as a fast
-              growing company that will add value to customers life.
+    <div className={styles.sectionWrapper}>
+      <div className={styles.overlay}></div> {/* Add overlay */}
+      <Container fluid>
+        <Row className="align-items-center">
+          <Col md={1} className="d-none d-md-block" /> {/* Desktop-only empty column */}
+          <Col md={6}>
+            <h2 className={styles.heading}>
+              Keep Your Favourite Dates, <br />
+              Nuts & Dry Fruits Fresh
+            </h2>
+            <p className={styles.paragraph}>
+              For short-term use, place them in sealed jars or containers and
+              store in a cool, shaded area away from air, light, and dampness.
+              Avoid warm temperatures—they can lead to spoilage or attract
+              insects. <br />
+              For extended freshness, refrigerate to maintain rich flavor and
+              texture.
             </p>
-            <br/>
-            <Button
-              // style={{ marginBottom: "30px" }}
-              className={styles["newsbtn"]}
-              href="/aboutus"
-              variant="outline-dark"
-              id="button-addon2"
-            >
-              Know More
-            </Button>
           </Col>
-          <Col className="offset-lg-1" lg={5}>
-            <Image
-              className={styles["intro-image"]}
-              height="380"
-              width="450"
-              objectFit="contain"
-              src="/images/displayimagemain.jpg"
-              alt="logo_img"
-            />
+          <Col md={5}>
+            <div className={styles.imageWrapper}>
+              <motion.img
+                src="/images/about.jpg"
+                alt="Dry Fruits"
+                className={styles.image}
+                whileHover={{ scale: 1.05 }}
+                transition={{ duration: 0.4 }}
+              />
+            </div>
           </Col>
         </Row>
       </Container>
-    </section>
+    </div>
   );
 };
 

@@ -2,23 +2,22 @@ import React from "react";
 import HomeBanner from './banner'
 import Intro from './intro'
 import Product from '../product'
-import Offer from './offer'
-import Ingredient from "./ingredient";
-import Benfits from "./benfits";
 import Testimony from "./testimony";
-import Reel from './reel';
+import Premium from "./premium";
+import Special from './special';
+import Intro1 from './intro1';
+import Featured from "./featured";
 
 const Home = ({ productData }) => {
   return (
     <>
       <HomeBanner />
+      <Featured />
       <Intro />
-      <Product productData={productData} />
-      {/* <Offer /> */}
-      <Ingredient />
-      <Benfits />
+      <Special />
+      <Intro1 />
+      <Premium />
       <Testimony />
-      <Reel />
     </>
   );
 };

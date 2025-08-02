@@ -177,9 +177,9 @@ const Product = ({ productData: initialProductData }) => {
   // // const handleShow = () => setShow(true);
 
   return (
-    <section style={{ background: "#fdfdfd", padding: "50px 0" }}>
+    <section className={styles.productsec} style={{ padding: "50px 0" }}>
       <Container>
-        <h2 className="text-center mb-5 fw-bold">Our Premium Products</h2>
+        <h2 className={` ${styles.title} text-start mb-4 fw-bold`}>Product's</h2>
         <Row>
           {products.map((product, index) => (
             <Col xs={12} sm={6} md={4} lg={3} className="mb-4 d-flex align-items-stretch">
