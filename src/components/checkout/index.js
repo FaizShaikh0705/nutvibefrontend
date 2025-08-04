@@ -13,7 +13,7 @@ import Payment from "./payment";
 import Placeorder from "./placeorder";
 import { LinkContainer } from 'react-router-bootstrap'
 import { useRouter } from "next/router";
-import * as fbq from "../../../lib/fpixel";
+// import * as fbq from "../../../lib/fpixel";
 
 
 const index = () => {

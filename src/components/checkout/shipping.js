@@ -12,7 +12,7 @@ import { setAddress, setContact, setGst } from '../../redux/userRedux';
 import { setShipAddress } from '../../redux/orderRedux';
 import { useRouter } from 'next/router';
 import { useDispatch } from "react-redux";
-import pincodes from "../../../public/pincodes.json";
+// import pincodes from "../../../public/pincodes.json";
 import styles from './checkout.module.scss'
 
 
