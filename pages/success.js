@@ -2,7 +2,7 @@ import { NextSeo } from 'next-seo';
 import MasterLayout from '../src/components/layouts/master';
 import SeoSchema from "../src/components/seo/schema";
 import SuccessContainer from "../src/components/success";
-import axios from 'axios';
+// import axios from 'axios';
 
 const success = () => {
     let schemaData = {

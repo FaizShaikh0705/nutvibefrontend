@@ -1,6 +1,6 @@
 import { NextSeo } from 'next-seo';
 import ProductContainer from "../../src/components/product";
-import axios from 'axios';
+// import axios from 'axios';
 import { publicRequest } from "../../src/requestMethods";
 
 const Product = ({ productData }) => {

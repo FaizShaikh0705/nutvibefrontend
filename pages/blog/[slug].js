@@ -3,7 +3,7 @@ import { NextSeo } from 'next-seo';
 import MasterLayout from '../../src/components/layouts/master';
 import SeoSchema from '../../src/components/seo/schema';
 import BlogDetailsContainer from '../../src/components/blog/blogDetails';
-import axios from 'axios';
+// import axios from 'axios';
 import { publicRequest } from "../../src/requestMethods";
 
 const RelatedBlog = ({ blogDetailsData }) => {

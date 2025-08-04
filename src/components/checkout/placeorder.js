@@ -7,7 +7,7 @@ import { useRouter } from "next/router";
 import { placeOrder } from "../../redux/apiCalls";
 import { resetCart, removeCoupon } from '../../redux/cartRedux';
 import styles from './checkout.module.scss'
-import axios from "axios";
+// import axios from "axios";
 import { placeOrderStart, placeOrderSuccess, resetOrder, placeOrderFailure } from "../../redux/orderRedux";
 // const KEY = process.env.NEXT_PUBLIC_REACT_APP_STRIPE;
 // import * as fbq from '../../../lib/fpixel';

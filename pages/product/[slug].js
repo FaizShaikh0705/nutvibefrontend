@@ -6,7 +6,7 @@ import SeoSchema from '../../src/components/seo/schema';
 import ProductDetailsContainer from '../../src/components/product/productDetails';
 import { publicRequest } from "../../src/requestMethods";
 // import * as fbq from '../../lib/fpixel';
-import axios from 'axios';
+// import axios from 'axios';
 
 const RelatedProduct = ({ productDetailsData }) => {
     // console.log("productDetailsData", productDetailsData)

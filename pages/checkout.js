@@ -2,7 +2,7 @@ import { NextSeo } from 'next-seo';
 import MasterLayout from '../src/components/layouts/master';
 import SeoSchema from "../src/components/seo/schema";
 import CheckoutContainer from "../src/components/checkout";
-import axios from 'axios';
+// import axios from 'axios';
 
 const checkout = () => {
     let schemaData = {

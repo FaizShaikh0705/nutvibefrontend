@@ -27,7 +27,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { Formik, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
-import axios from "axios";
+// import axios from "axios";
 import { FaStar } from "react-icons/fa";
 import Slider from "react-slick";
 import { publicRequest } from "../../requestMethods";

@@ -5,7 +5,7 @@ import { register } from "../../redux/apiCalls";
 import { store } from "../../redux/store";
 import Link from "next/link";
 import * as Yup from "yup";
-import axios from "axios";
+// import axios from "axios";
 import { userRequest, isTokenSet } from '../../requestMethods'
 import { useSelector } from 'react-redux';
 import { setAddress, setContact, setGst } from '../../redux/userRedux';

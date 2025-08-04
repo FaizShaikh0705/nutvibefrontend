@@ -2,7 +2,7 @@ import React from 'react'
 import { NextSeo } from 'next-seo';
 import MasterLayout from '../src/components/layouts/master';
 import SeoSchema from "../src/components/seo/schema";
-import axios from 'axios';
+// import axios from 'axios';
 import Contact from '../src/components/contact/contact.js';
 const contact = () => {
   let schemaData = {
