@@ -2,7 +2,6 @@ import MasterLayout from '../src/components/layouts/master';
 import { useState, useEffect } from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import "../src/styles/style.scss";
-import 'react-owl-carousel2/lib/styles.css';
 
 import { Provider } from 'react-redux';
 import { store, persistor } from "../src/redux/store";
