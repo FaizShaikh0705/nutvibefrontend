@@ -35,14 +35,14 @@ const Blog = ({ blogData }) => {
 
 export default Blog;
 
-export async function getStaticProps() {
-    const res = await publicRequest.get("/blog");
-    const blogData = await res.data;
+// export async function getStaticProps() {
+//     const res = await publicRequest.get("/blog");
+//     const blogData = await res.data;
 
-    return {
-        props: {
-            blogData,
-        },
-        revalidate: 10,
-    };
-};
+//     return {
+//         props: {
+//             blogData,
+//         },
+//         revalidate: 10,
+//     };
+// };

@@ -41,14 +41,14 @@ export default Product;
 //     });
 // };
 
-export async function getStaticProps() {
-    const res = await publicRequest.get("/products");
-    const productData = res.data;
+// export async function getStaticProps() {
+//     const res = await publicRequest.get("/products");
+//     const productData = res.data;
 
-    return {
-        props: {
-            productData,
-        },
-        revalidate: 10,
-    }
-}
+//     return {
+//         props: {
+//             productData,
+//         },
+//         revalidate: 10,
+//     }
+// }
