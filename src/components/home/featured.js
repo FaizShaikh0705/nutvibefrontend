@@ -77,6 +77,7 @@ const featured = () => {
                                             height={200}
                                             className="rounded"
                                             layout="responsive"
+                                            unoptimized
                                         />
                                     </motion.div>
                                     <Card.Body>
