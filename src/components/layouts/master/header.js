@@ -173,19 +173,6 @@ const Header = ({ productData: initialProductData, sluginput }) => {
                 >
                   Contact
                 </Link>
-
-                {/* <Link className="nav-link pe-5" href="/cart">
-                  <button
-                    type="button"
-                    className={`${styles['cart-btn']} btn position-relative`}
-                  >
-                    <span className={styles['cart-icon']}><FaCartPlus /></span>
-                    <span className={`${styles['cart-badge']} position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger`}>
-                      {quantity}
-                      <span className="visually-hidden">unread messages</span>
-                    </span>
-                  </button>
-                </Link> */}
                 {currentUser && currentUser.currentUser ? (
                   <NavDropdown
                     title={currentUser.currentUser.firstName || currentUser.currentUser.userName}
@@ -268,33 +255,6 @@ const Header = ({ productData: initialProductData, sluginput }) => {
                 </div>
               </Nav>
             )}
-
-            {/* {!isMobile && (
-              <Nav className={`${styles["cart-icon-desktop"]} navbar-nav`}>
-                <Link className="nav-link pe-5" href="/cart">
-                  <button
-                    type="button"
-                    className={`${styles["cart-btn"]} btn position-relative`}
-                  >
-                    <span className={styles["cart-icon"]}>
-                      <FaCartPlus />
-                    </span>
-                    <span
-                      className={`${styles["cart-badge"]} position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger`}
-                    >
-                      {quantity}
-                      <span className="visually-hidden">unread messages</span>
-                    </span>
-                  </button>
-                </Link>
-                <Link className="nav-link" href=''onClick={handleShow} >
-                  <div className={styles['search-icon']} >
-                  <IoSearch />
-                  </div>
-                </Link>
-              </Nav>
-            )} */}
-
             <Offcanvas show={show} onHide={handleClose} placement="end"> {/* Change placement to "end" */}
               <Offcanvas.Header closeButton>
                 <Offcanvas.Title>Search</Offcanvas.Title>
@@ -347,51 +307,6 @@ const Header = ({ productData: initialProductData, sluginput }) => {
                                   <>Rs. {item.postPriceName}.00</>
                                 )}
                               </Card.Text>
-                              {/* <Card.Title>{item[1].postTopicName}</Card.Title>
-                                            <Card.Text>Rs. {item[1].postPriceName}.00</Card.Text> */}
-                              {/* <InputGroup className=" justify-content-center">
-                          {item.postVariantName2 == "" ? "" :
-                            <DropdownButton
-                              variant="outline-dark"
-                              title={
-                                selectedVariants[key]
-                                  ? selectedVariants[key].variantName
-                                  : "50 ml"
-                              }
-                              id="input-group-dropdown-1"
-                            >
-                              <Dropdown.Item
-                                onClick={() =>
-                                  handleVariantSelect(key, {
-                                    title: item.postTopicName,
-                                    price: item.postPriceName,
-                                    variantName: item.postVariantName1,
-                                  })
-                                }
-                              >
-                                {item.postVariantName1}
-                              </Dropdown.Item>
-                              <Dropdown.Item
-                                onClick={() =>
-                                  handleVariantSelect(key, {
-                                    title: item.postTopicName2,
-                                    price: item.postPriceName2,
-                                    variantName: item.postVariantName2,
-                                  })
-                                }
-                              >
-                                {item.postVariantName2}
-                              </Dropdown.Item>
-                            </DropdownButton>}
-                          <Button
-                            onClick={() => addProductInCart(item, key)}
-                            className={styles["add-cart"]}
-                            variant="outline-dark"
-                            id="button-addon2"
-                          >
-                            ADD TO CART
-                          </Button>
-                        </InputGroup> */}
                             </Card.Body>
                           </Card>
                         </Col>
