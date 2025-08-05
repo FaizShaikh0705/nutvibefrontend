@@ -26,7 +26,7 @@ const Footer = () => {
           <Row className="align-items-start">
             {/* Logo and Tagline */}
             <Col md={3} sm={12} className="mb-4">
-              <Image src="/images/logo.png" alt="Logo" width={100} height={50} />
+              <Image src="/images/logo.png" alt="Logo" width={100} height={50} unoptimized />
               <p className="mt-3">
                 Healthy Snacking Begins with the Natural Goodness of NutsVibe.
               </p>

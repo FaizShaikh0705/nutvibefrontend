@@ -225,6 +225,7 @@ const testimony = () => {
                         height="10"
                         alt="testimony1"
                         className={styles["testi-image"]}
+                        unoptimized
                       />
 
                     </Modal.Body>

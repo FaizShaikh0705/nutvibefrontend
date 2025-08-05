@@ -138,6 +138,7 @@ const Header = ({ productData: initialProductData, sluginput }) => {
                 width={90}
                 objectFit="contain"
                 className={styles["nav-logo"]}
+                unoptimized
               />
             </Link>
             <Navbar.Collapse id="navbarScroll">
