@@ -131,12 +131,12 @@ const Header = ({ productData: initialProductData, sluginput }) => {
           <Container fluid id="header11">
             <Link className="navbar-brand" href="/">
               <Image
-                key=""
-                height="90"
-                width="90"
-                objectFit="contain"
                 src="/images/logo.png"
                 alt="logo_img"
+                key=""
+                height={90}
+                width={90}
+                objectFit="contain"
                 className={styles["nav-logo"]}
               />
             </Link>
