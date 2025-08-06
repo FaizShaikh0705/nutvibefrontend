@@ -51,8 +51,8 @@ const featured = () => {
     return (
         <section className={styles.productsec} style={{ padding: "50px 0" }}>
             <Container>
-                <h2 className={` ${styles.ptitle} text-start mb-4 fw-bold`}>Featured Product's</h2>
-                <h5 className={`${styles.subtitle} text-start mb-4 fw-bold`}>Top - Featured Product's</h5>
+                <h2 className={` ${styles.ptitle} text-start mb-2 mb-md-3 fw-bold`}>Featured Product's</h2>
+                <h5 className={`${styles.subtitle} text-start mb-3 mb-md-4 fw-bold`}>Top - Featured Product's</h5>
                 <Row>
                     {products.map((product, index) => (
                         <Col xs={12} sm={6} md={4} lg={3} className="mb-4 d-flex align-items-stretch">

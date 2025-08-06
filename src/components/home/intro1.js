@@ -13,7 +13,7 @@ const intro = () => {
       <Container fluid>
         <Row className="align-items-center">
           <Col md={5}>
-            <div className={styles.imageWrapper}>
+            <div className={`${styles.imageWrapper} ${styles.sec2}`}>
               <motion.img
                 src="/images/about.jpg"
                 alt="Dry Fruits"
