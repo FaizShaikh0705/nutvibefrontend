@@ -26,7 +26,7 @@ img {
 .nav-link {
   color: #000 !important;
   font-size: 0.9em;
-  font-family: Poppins ;
+  font-family: Poppins;
   font-weight: 600;
 }
 
@@ -60,7 +60,7 @@ img {
   }
 
   #header11 {
-    padding: 0px 30px !important;
+    padding: 0px 10px !important;
   }
 }
 
@@ -339,7 +339,7 @@ p {
 
 .card-text {
   // font-weight: 500;
-  font-family: Poppins ;
+  font-family: Poppins;
 }
 
 .home-banner-img {
@@ -476,4 +476,9 @@ p {
   &:hover {
     opacity: 0.8;
   }
+}
+
+
+.navbar-toggler {
+  padding: 0 !important;
 }

@@ -128,19 +128,28 @@ const Header = ({ productData: initialProductData, sluginput }) => {
 
       <header>
         <Navbar className={`${styles["nav-clr"]} `} expand="lg" fixed="top" expanded={isNavbarExpanded}>
-          <Container fluid id="header11">
-            <Link className="navbar-brand" href="/">
-              <Image
-                src="/images/logo.png"
-                alt="logo_img"
-                key=""
-                height={90}
-                width={90}
-                objectFit="contain"
-                className={styles["nav-logo"]}
-                unoptimized
-              />
-            </Link>
+          <Container fluid id="header11" className="d-flex justify-content-between align-items-center px-3">
+            <div className="d-lg-none pe-5">
+              <Navbar.Toggle aria-controls="responsive-navbar-nav" id="navcolbtn" onClick={handleToggle}>
+                <span className={styles["togg-btn"]}>
+                  <IoReorderThree />
+                </span>
+              </Navbar.Toggle>
+            </div>
+            <div className="mx-auto">
+              <Link className="navbar-brand d-flex justify-content-center" href="/">
+                <Image
+                  src="/images/logo.png"
+                  alt="logo_img"
+                  key=""
+                  height={90}
+                  width={90}
+                  objectFit="contain"
+                  className={styles["nav-logo"]}
+                  unoptimized
+                />
+              </Link>
+            </div>
             <Navbar.Collapse id="navbarScroll">
               <Nav
                 className="navbar-nav mr-auto w-100 justify-content-end clearfix"
@@ -225,7 +234,7 @@ const Header = ({ productData: initialProductData, sluginput }) => {
               </Nav>
             </Navbar.Collapse>
             {isMobile && (
-              <Link className="nav-link pe-3" href='' onClick={() => { handleShow(); handleNavClose(); }}>
+              <Link className="nav-link pe-1" href='' onClick={() => { handleShow(); handleNavClose(); }}>
                 <div className={styles['search-icon']}>
                   <IoSearch />
                 </div>
@@ -318,12 +327,6 @@ const Header = ({ productData: initialProductData, sluginput }) => {
                 </Container>
               </Offcanvas.Body>
             </Offcanvas>
-
-            <Navbar.Toggle aria-controls="responsive-navbar-nav" id="navcolbtn" onClick={handleToggle}>
-              <span className={styles["togg-btn"]}>
-                <IoReorderThree />
-              </span>
-            </Navbar.Toggle>
           </Container>
         </Navbar>
       </header>
