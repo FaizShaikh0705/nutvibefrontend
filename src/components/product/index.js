@@ -16,6 +16,13 @@ import { useDispatch, useSelector } from "react-redux";
 import { publicRequest } from "../../requestMethods";
 import { motion } from "framer-motion";
 // import * as fbq from '../../../lib/fpixel';
+import Banner from '../home/banner'
+import Intro from '../home/intro'
+import Special from '../home/special'
+import Premium from '../home/premium'
+import Intro1 from '../home/intro1'
+import Testimony from '../home/testimony'
+
 
 
 const products = [
@@ -177,53 +184,60 @@ const Product = ({ productData: initialProductData }) => {
   // // const handleShow = () => setShow(true);
 
   return (
-    <section className={styles.productsec} style={{ padding: "50px 0" }}>
-      <Container>
-        <h2 className={` ${styles.title} text-start mb-4 fw-bold`}>Product's</h2>
-        <Row>
-          {products.map((product, index) => (
-            <Col xs={12} sm={6} md={4} lg={3} className="mb-4 d-flex align-items-stretch">
-              <motion.div
-                variants={cardVariants}
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="w-100"
-              >
-                <Card className={styles.card}>
-                  <motion.div
-                    whileHover={{ scale: 1.1 }}
-                    transition={{ duration: 0.4, ease: "easeInOut" }}
-                    className={styles.imageWrapper}
-                  >
-                    <Image
-                      src={product.image}
-                      alt={product.name}
-                      width={300}
-                      height={200}
-                      className="rounded"
-                      layout="responsive"
-                    />
-                  </motion.div>
-                  <Card.Body>
-                    <div className="d-flex justify-content-between">
-                      <Card.Title className={styles.productName}>{product.name}</Card.Title>
-                      <span className={styles.weight}>{product.weight}</span>
-                    </div>
-                    <Card.Text className={styles.category}>{product.category}</Card.Text>
-                    <div className="d-flex justify-content-between align-items-center">
-                      <span className={styles.price}>Rs. {product.price.toFixed(2)}</span>
-                      <Button className={styles.cartButton}>Add to Cart</Button>
-                    </div>
-                  </Card.Body>
-                </Card>
-              </motion.div>
-            </Col>
-          ))}
-        </Row>
-      </Container>
-    </section>
+    <>
+      <Banner />
+      <section className={styles.productsec} style={{ padding: "50px 0" }}>
+        <Container>
+          <h2 className={` ${styles.title} text-start mb-4 fw-bold`}>Product's</h2>
+          <Row>
+            {products.map((product, index) => (
+              <Col xs={12} sm={6} md={4} lg={3} className="mb-4 d-flex align-items-stretch">
+                <motion.div
+                  variants={cardVariants}
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  className="w-100"
+                >
+                  <Card className={styles.card}>
+                    <motion.div
+                      whileHover={{ scale: 1.1 }}
+                      transition={{ duration: 0.4, ease: "easeInOut" }}
+                      className={styles.imageWrapper}
+                    >
+                      <Image
+                        src={product.image}
+                        alt={product.name}
+                        width={300}
+                        height={200}
+                        className="rounded"
+                        layout="responsive"
+                      />
+                    </motion.div>
+                    <Card.Body>
+                      <div className="d-flex justify-content-between">
+                        <Card.Title className={styles.productName}>{product.name}</Card.Title>
+                        <span className={styles.weight}>{product.weight}</span>
+                      </div>
+                      <Card.Text className={styles.category}>{product.category}</Card.Text>
+                      <div className="d-flex justify-content-between align-items-center">
+                        <span className={styles.price}>Rs. {product.price.toFixed(2)}</span>
+                        <Button className={styles.cartButton}>Add to Cart</Button>
+                      </div>
+                    </Card.Body>
+                  </Card>
+                </motion.div>
+              </Col>
+            ))}
+          </Row>
+        </Container>
+      </section>
+      <Intro1 />
+      <Special />
+      <Intro />
+      <Premium />
+    </>
   );
 };
 

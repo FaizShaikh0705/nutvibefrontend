@@ -170,12 +170,12 @@ const Header = ({ productData: initialProductData, sluginput }) => {
                 >
                   Shop
                 </Link>
-                <Link
+                {/* <Link
                   className={`${styles["pad-a"]} nav-link pe-5`}
                   href="/blog"
                 >
                   Blog
-                </Link>
+                </Link> */}
                 <Link
                   className={`${styles["pad-a"]} nav-link pe-5`}
                   href="/contact"

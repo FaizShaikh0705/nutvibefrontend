@@ -8,6 +8,12 @@ import { useSelector } from 'react-redux';
 import * as Yup from "yup";
 import { IoMail } from "react-icons/io5";
 import styles from './contact.module.scss'
+import Banner from '../home/banner'
+import Intro from '../home/intro'
+import Special from '../home/special'
+import Premium from '../home/premium'
+import Intro1 from '../home/intro1'
+import Testimony from '../home/testimony'
 
 var $ = require("jquery");
 if (typeof window !== "undefined") {
@@ -43,121 +49,54 @@ const Contact = () => {
 
   return (
     <>
-      <section className={styles['contact-head']}>
+      <Banner />
+      <section className={styles.contactSection}>
         <Container>
-          <Row>
-            <Col lg={12}>
-              <div className={styles['content']}>
-                <h2>Contact Us</h2>
+          <div className={styles.container}>
+            {/* Left Info Box */}
+            <div className={styles.infoBox}>
+              <h3>Contact Information</h3>
+              <p>Say something to start a live chat!</p>
+              <div className={styles.infoItem}>
+                <span>📞</span> +91 8976270971
               </div>
-            </Col>
-          </Row>
+              <div className={styles.infoItem}>
+                <span>📧</span> enterprisescrystal046@gmail.com
+              </div>
+              <div className={styles.infoItem}>
+                <span>📍</span> F-44, A.P.M.C, Masala Market,<br />
+                Phase-2, Vashi, Navi Mumbai - 400703
+              </div>
+            </div>
+
+            {/* Right Form */}
+            <div className={styles.formBox}>
+              <form>
+                <div className={styles.row}>
+                  <input type="text" placeholder="First Name" />
+                  <input type="text" placeholder="Last Name" />
+                </div>
+                <div className={styles.row}>
+                  <input type="email" placeholder="Email" />
+                  <input type="tel" placeholder="+91 99999 99999" />
+                </div>
+                <div className={styles.radioGroup}>
+                  <label><input type="radio" name="subject" /> General Inquiry</label>
+                  <label><input type="radio" name="subject" /> General Inquiry</label>
+                  <label><input type="radio" name="subject" /> General Inquiry</label>
+                </div>
+                <textarea placeholder="Write your message..."></textarea>
+                <button type="submit">Send Message</button>
+              </form>
+            </div>
+          </div>
         </Container>
       </section>
-      <section className={`${styles['contact-body']} my-4`}>
-        <Container>
-          <Row>
-            <Col lg={6}>
-              <div className={`${styles['box-form']} box shadow rounded-4 p-5`}>
-                {/* <h3 className="text-secondary fw-bold">Contact Us</h3>
-                <hr /> */}
-                <Formik
-                  initialValues={{
-                    name: '',
-                    email: '',
-                    number: '',
-                    message: '',
-                  }}
-                  validationSchema={Yup.object().shape({
-                    name: Yup.string().required('Please enter your name.'),
-                    email: Yup.string().email('Invalid email address').required('Please enter your email address.'),
-                    number: Yup.string().required('Please enter your phone number.'),
-                    message: Yup.string().required('Please enter your message.'),
-                  })}
-                  onSubmit={handleFormSubmit}
-                >
-                  {(formik) => (
-                    <Form onSubmit={formik.handleSubmit}>
-                      <Form.Group className="mb-3" controlId="formBasicName">
-                        <Form.Label>Name</Form.Label>
-                        <Field
-                          className={`form-control ${formik.touched.name && formik.errors.name ? 'is-invalid' : ''}`}
-                          type="text"
-                          name="name"
-                          placeholder="Enter Name"
-                        />
-                        <ErrorMessage
-                          name="name"
-                          component="div"
-                          className={`${styles['valid-clr']} invalid-feedback`}
-                        />
-                      </Form.Group>
-                      <Form.Group className="mb-3" controlId="formBasicEmail">
-                        <Form.Label>Email address</Form.Label>
-                        <Field
-                          className={`form-control ${formik.touched.email && formik.errors.email ? 'is-invalid' : ''}`}
-                          type="email"
-                          name="email"
-                          placeholder="Enter email"
-                        />
-                        <ErrorMessage
-                          name="email"
-                          component="div"
-                          className={`${styles['valid-clr']} invalid-feedback`}
-                        />
-                      </Form.Group>
-                      <Form.Group className="mb-3" controlId="formBasicNumber">
-                        <Form.Label> Phone Number</Form.Label>
-                        <Field
-                          className={`form-control ${formik.touched.number && formik.errors.number ? 'is-invalid' : ''}`}
-                          type="number"
-                          name="number"
-                          placeholder="Enter Phone Number"
-                        />
-                        <ErrorMessage
-                          name="number"
-                          component="div"
-                          className={`${styles['valid-clr']} invalid-feedback`}
-                        />
-                      </Form.Group>
-                      <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
-                        <Form.Label>Message</Form.Label>
-                        <Field
-                          className={`form-control ${formik.touched.message && formik.errors.message ? 'is-invalid' : ''}`}
-                          as="textarea"
-                          rows={3}
-                          name="message"
-                          placeholder="Type Message..."
-                        />
-                        <ErrorMessage
-                          name="message"
-                          component="div"
-                          className={`${styles['valid-clr']} invalid-feedback`}
-                        />
-                      </Form.Group>
-                      <Button variant="outline-dark" type="submit">
-                        Submit
-                      </Button>
-                    </Form>
-                  )}
-                </Formik>
-              </div>
-            </Col>
-
-            <Col lg={{ span: 5, offset: 1 }} className='mt-4'>
-              <p><strong><span style={{ color: '#9f6d00' }}><FaLocationDot /></span>&nbsp; Address</strong></p>
-              <p>Heena Style Affairs<br />AR 26, A Wing, Nootan Nagar CHS,<br /> Near Bandra Station,<br />Opp. Sahakari Bhandar,<br />Bandra West,<br />Mumbai-400050</p>
-              <p className='mt-3'><strong><span style={{ color: '#9f6d00' }}><FaPhone /></span>&nbsp; Get in Touch</strong></p>
-              <Link href='tel:+918104583429'><p>+91 8104583429</p></Link>
-              <p className='mt-3'><strong><span style={{ color: '#9f6d00' }}><IoMail /></span>&nbsp; Email address</strong></p>
-              <Link href="https://mail.google.com/mail/?view=cm&fs=1&to=info@qirahworld.com.in&su=SUBJECT&body=BODY" target="blank"><p>info@qirahworld.com</p></Link>
-              <p className='mt-3'><strong><span style={{ color: '#9f6d00' }}><FaSquareInstagram /></span>&nbsp; Instagram ID</strong></p>
-              <Link href='https://www.instagram.com/qirah.world?igsh=MWthamJtb2JscGNldA%3D%3D&utm_source=qr ' target="blank"><p>qirah.world</p></Link>
-
-            </Col>
-          </Row>
-        </Container>
-      </section>
+      <Intro />
+      <Special />
+      <Intro1 />
+      <Premium />
+      <Testimony />
     </>
   )
 }
